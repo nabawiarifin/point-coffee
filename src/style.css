@@ -1,6 +1,7 @@
 :root{
     --green: #028446;
     --lightgreen: #00af5b;
+    --brown: #362415;
 }
 
 body{
@@ -48,6 +49,7 @@ header ul{
     display: flex;
     gap: 15px;
     list-style-type: none;
+    
 }
 
 header button{
@@ -55,10 +57,17 @@ header button{
     color: white;
     border-style: none;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 header button:hover{
     color: var(--lightgreen);
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* HOME */
@@ -134,3 +143,109 @@ header button:hover{
 .carousel-button.right{
     right: 1rem;
 }
+
+/* MENU */
+.menu{
+    width: 1280px;
+    height: 720px;
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: var(--brown);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: start;
+    justify-items: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.tea, .frappe, .milk, .indonesia{
+    width: 90%;
+    height: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-heading, .menu-type{
+    display: flex;
+}
+
+.menu-heading{
+    justify-content: space-between;
+    border-bottom: white 2px solid;
+    padding-bottom: 5px;
+    flex: 0 1 auto;
+}
+
+.menu-type{
+    gap: 32px;
+}
+
+.menu-choice, .menu-choice-2{
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.menu-photo{
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.menu-photo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+#tea-photo img{
+    rotate:-10deg;
+}
+
+#frappe-photo img{
+    width: 75%;
+    rotate: 10deg;
+}
+
+.menu-price{
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.drink-name, .price{
+    display: flex;
+}
+
+.drink-name{
+    justify-content: space-between;
+}
+
+.price{
+    margin-right: 10px;
+    gap: 53px;
+}
+
+/* MENU MILK & INDONESIA */
+.menu-choice-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.drink-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -30px;
+    gap: 5px;
+}
+.drink-container img {
+    width: 180px;
+}
+

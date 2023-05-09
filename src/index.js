@@ -1,5 +1,6 @@
 import './style.css';
 import { home } from "./home";
+import { menu, drinks } from "./menu";
 
 const header = document.createElement('header')
 const div = document.createElement('div')
@@ -21,6 +22,7 @@ const mainHeader = (() => {
         </div>
     `)
     header.appendChild(headerHTML)
+    menu()
 })();
 
 const headerPress = (() => {
@@ -43,11 +45,22 @@ function elementFromHTML(html) {
 
 function headerSelection (choice) {
     if (choice == "Home") {
+        removeContent()
         home()
     } else if (choice == "Menu") {
-        
+        removeContent()
+        menu()
     } else {
+    }
+}
 
+// Switch content
+function removeContent () {
+    const content = document.getElementById('content')
+    if (content.childNodes.length === 0) {
+        console.log("No Child")
+    } else {
+        content.removeChild(content.firstElementChild)
     }
 }
 
